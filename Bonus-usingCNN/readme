@@ -1,0 +1,35 @@
+## Preprocessing Details
+All images are auto-oriented and resized to 416x416 pixels. Data Augmentation is not applied due to Hardware constraint. With Data Augmentation accuracy can be increased.
+
+
+## Directory Structure
+- train_images/
+- valid_images/
+- test_images/
+- train.csv
+- valid.csv
+- test.csv
+
+## Model Information
+We use the InceptionV3 architecture, leveraging transfer learning. The top layer is replaced to accommodate our number of classes.
+
+## Hyperparameter Tuning
+Prior to finalizing the model, we conducted hyperparameter tuning. The best parameters identified were:
+
+Units: 128
+Dropout Rate: 0.1
+Learning Rate: 0.0023327793733607717
+The model was trained for 2 epochs during the tuning process. These parameters helped in achieving a model accuracy of approximately 88.37% on the validation set.
+
+## Evaluation Metrics
+Model performance is evaluated based on accuracy, precision, recall, and F1 score. The final accuracy achieved on the test set was 0.8837209343910217.
+
+## Model Saving Formats
+The trained model is saved in two formats for compatibility and convenience:
+
+HDF5 format: model1.h5
+Keras format: my_model1.keras
+These files can be used to load the model for further analysis, development, or deployment.
+
+## Dependencies
+Requirements.txt file is provided for installing all the packages and modules.

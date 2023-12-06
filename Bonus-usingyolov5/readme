@@ -1,0 +1,24 @@
+## Prerequisites
+Python 3.6+
+PyTorch 1.7+
+Requirements: Run pip install -r requirements.txt from the YOLOv5 repository.
+
+
+## Hyperparameter Evolution
+python train.py --img 640 --batch 16 --epochs 27 --data data.yaml --weights yolov5s.pt --evolve
+
+Interrupting Evolution
+To manually stop the evolution process and check for interim weights:
+
+Interrupt the process in the command line using Ctrl + C.
+Check the runs/train/ or runs/evolve/ directories for the last.pt file.
+-> Due to Hardware constraint cannat able to execute the above command but using evolve can achieved very good performance and I tried it for 1 iteration and it took around 10 hours to run but received class loss close to 0.0043 and not able to saves the weights because of interuption of memory overflow.
+
+
+## Weights
+Training outputs are saved in runs/train/ or runs/evolve/ directories.
+Check these directories for model weights (best.pt and last.pt), performance metrics, and inference results.
+
+## Customization
+Edit data.yaml to point to your custom dataset.
+Adjust training parameters as needed (e.g., --batch, --epochs).
